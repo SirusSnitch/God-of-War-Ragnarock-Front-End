@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God of War Ragnarök</title>
+    <link rel="icon" href="image/ragnarock.png">
+    <link rel="stylesheet" href="ragnar.css">
+</head>
+<body class="body2">
+    <div class="desc">
+        <h1>
+            Fill this form
+        </h1>
+        <form action="post">
+            <div class="txtf">
+                <input type="text" required>
+                <span></span>
+                <label>First Name</label>
+            </div>
+            <div class="txtf">
+                <input type="text" required>
+                <span></span>
+                <label>Last Name</label>
+            </div>
+            <div class="txtf">
+                <input type="email" required>
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txtf"> 
+                <input type="text" required>
+                <span></span>
+                <label>Address</label>
+            </div>
+            <div class="txtf"> 
+                <input type="number" required>
+                <span></span>
+                <label>Phone Number</label>
+            </div>
+            <div class="txtf"> 
+                <input type="number" required id="olde">
+                <span></span>
+                <label>Age</label>
+            </div>
+            <h2>
+                Choose version
+            </h2>
+            <center>
+                <div class="radio">
+                    <input type="radio" name="version" id="ps4" onclick="Ps4()">
+                    <label for="ps4" class="rad">PS4 Edition</label>
+                    <input type="radio" name="version" id="ps5" onclick="Ps5()">
+                    <label for="ps5" class="rad">PS5 Edition</label>
+                    <input type="radio" name="version" id="jotnar" onclick="Jot()">
+                    <label for="jotnar" class="jotrad">Jötnar Edition</label>
+                    <input type="radio" name="version" id="collect" onclick="Coll()">
+                    <label for="collect" class="colrad">Collector's Edition</label>
+                </div>
+            </center>
+            
+            <h2>payment methods</h2>
+            <center>
+                <p class="jotrad" style="margin: 0; display: inline;">PRICE :</p>
+                <p class="rad" style="margin: 0; display: inline;" align="right" id="money">NONE</p>
+                <br><br>
+            </center>
+            <center>
+                <div class="radio">
+                    <input type="radio" name="pay" id="ae">
+                    <label for="ae" class="rad">American Express</label>
+                    <input type="radio" name="pay" id="mc">
+                    <label for="mc" class="rad">MasterCard</label>
+                    <input type="radio" name="pay" id="vi">
+                    <label for="vi" class="rad">Visa</label>
+                    <input type="radio" name="pay" id="pp">
+                    <label for="pp" class="rad">PayPal</label>
+                </div>
+            </center>
+            <div class="btnrow">
+                <input type="submit" value="submit" class="btn" onclick="Old()">
+                <input type="reset" value="Reset" class="btn" onclick="Reset()">
+                <a href="Start.html" class="btn">Return</a>
+            </div>
+        </form>
+
+    </div>
+    <script lang="javascript">
+        function Old(){
+            var age = document.getElementById('olde').value ;
+            if(age < 18){
+                alert('YOU NEED TO BE AT LEAST 18 YEARS OLD TO BUY THIS GAME');
+            }
+            else{
+                alert('SUCCESSFUL');
+            }
+        }
+        function Ps4(){
+            document.getElementById('money').innerHTML = "$59.99";
+        }
+        function Ps5(){
+            document.getElementById('money').innerHTML = "$69.99";
+        }
+        function Jot(){
+            document.getElementById('money').innerHTML = "$259.99";
+        }
+        function Coll(){
+            document.getElementById('money').innerHTML = "$269.99";
+        }
+        function Reset(){
+            document.getElementById('money').innerHTML = "NONE";
+        }
+
+    </script>
+</body>
+</html>
